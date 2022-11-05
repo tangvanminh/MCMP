@@ -1,0 +1,23 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: MINH
+ */
+
+#ifndef INC_SOFTWARE_TIMER_H_
+#define INC_SOFTWARE_TIMER_H_
+
+#define NUMBER_OF_TIMERS	3
+
+#define INTERRUPT_CYCLE		10
+
+extern int timer_flag[NUMBER_OF_TIMERS];
+
+void set_timer0_ms(int num);
+void set_timer1_ms(int num);
+void set_timer2_ms(int num);
+
+void timer_run();
+
+#endif /* INC_SOFTWARE_TIMER_H_ */
