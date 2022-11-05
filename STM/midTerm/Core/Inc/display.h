@@ -1,0 +1,16 @@
+/*
+ * display.h
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: MINH
+ */
+
+#ifndef INC_DISPLAY_H_
+#define INC_DISPLAY_H_
+
+#include "main.h"
+#include "global.h"
+
+void display_run();
+
+#endif /* INC_DISPLAY_H_ */

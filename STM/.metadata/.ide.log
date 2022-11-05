@@ -1091,3 +1091,7 @@
 2022-11-05 10:31:14,528 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
 2022-11-05 10:31:14,608 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] [Fatal Error] :1:7: The string "--" is not permitted within comments.
 2022-11-05 10:31:14,609 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-11-05 13:10:35,902 [INFO] Activator:177 - 
+
+
+2022-11-05 13:10:35,904 [INFO] Activator:178 - !SESSION log4j initialized
