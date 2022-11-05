@@ -72,7 +72,7 @@ void fsm_simple_button_run(){
 			if(timer0_flag == 1){
 				set_timer0_ms(1000);
 				count_value--;
-				if(count_value < 0) count_value = 9;
+				if(count_value == 10) count_value = 0;
 			}
 			if(button_released_flag[2] == 1){
 				status = IDLE;

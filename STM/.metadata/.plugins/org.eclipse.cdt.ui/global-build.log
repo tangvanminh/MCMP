@@ -468,3 +468,66 @@ Finished building: midTerm.bin
  
 Finished building: midTerm.list
  
+13:50:32 **** Incremental Build of configuration Debug for project midTerm ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/display.d" -MT"Core/Src/display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/display.o"
+arm-none-eabi-gcc "../Core/Src/fsm_simple_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_simple_button.d" -MT"Core/Src/fsm_simple_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_simple_button.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "midTerm.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\learnin\vixuli-dieukhien\midTerm\STM\midTerm\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midTerm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: midTerm.elf
+ 
+arm-none-eabi-size   midTerm.elf 
+arm-none-eabi-objdump -h -S  midTerm.elf  > "midTerm.list"
+arm-none-eabi-objcopy  -O ihex  midTerm.elf  "midTerm.hex"
+arm-none-eabi-objcopy  -O binary  midTerm.elf  "midTerm.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9848	     44	   1772	  11664	   2d90	midTerm.elf
+Finished building: default.size.stdout
+ 
+Finished building: midTerm.hex
+Finished building: midTerm.bin
+ 
+ 
+Finished building: midTerm.list
+ 
+13:53:25 **** Incremental Build of configuration Debug for project midTerm ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_simple_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_simple_button.d" -MT"Core/Src/fsm_simple_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_simple_button.o"
+arm-none-eabi-gcc -o "midTerm.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\learnin\vixuli-dieukhien\midTerm\STM\midTerm\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midTerm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: midTerm.elf
+ 
+arm-none-eabi-size   midTerm.elf 
+arm-none-eabi-objdump -h -S  midTerm.elf  > "midTerm.list"
+arm-none-eabi-objcopy  -O ihex  midTerm.elf  "midTerm.hex"
+arm-none-eabi-objcopy  -O binary  midTerm.elf  "midTerm.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9856	     44	   1772	  11672	   2d98	midTerm.elf
+Finished building: default.size.stdout
+ 
+Finished building: midTerm.hex
+Finished building: midTerm.bin
+ 
+ 
+Finished building: midTerm.list
+ 
+13:56:34 **** Incremental Build of configuration Debug for project midTerm ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_simple_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_simple_button.d" -MT"Core/Src/fsm_simple_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_simple_button.o"
+arm-none-eabi-gcc -o "midTerm.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\learnin\vixuli-dieukhien\midTerm\STM\midTerm\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midTerm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: midTerm.elf
+ 
+arm-none-eabi-size   midTerm.elf 
+arm-none-eabi-objdump -h -S  midTerm.elf  > "midTerm.list"
+arm-none-eabi-objcopy  -O ihex  midTerm.elf  "midTerm.hex"
+arm-none-eabi-objcopy  -O binary  midTerm.elf  "midTerm.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9856	     44	   1772	  11672	   2d98	midTerm.elf
+Finished building: default.size.stdout
+ 
+Finished building: midTerm.hex
+Finished building: midTerm.bin
+ 
+ 
+Finished building: midTerm.list
+ 

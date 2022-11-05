@@ -40,45 +40,14 @@ void fsm_simple_button_run(){
 			}
 			// when button 1 is pressed more than 3s change state to auto increasing
 			if(button_pressed3s_flag[1] == 1){
-				set_timer0_ms(1000); // timer for interval between increasing
-				status = AUTO_INCREASING;
+
 			}
 			break;
 		case DECREASED:
 			if(button_released_flag[2] == 1){
 				status = IDLE;
 			}
-
-			// when button 2 is pressed more than 3s change state to auto decreasing
-			if(button_pressed3s_flag[2] == 1){
-				set_timer0_ms(1000); // timer for interval between decreasing
-				status = AUTO_DECREASING;
-			}
 			break;
-		// Add auto_increasing state
-		case AUTO_INCREASING:
-			if(timer0_flag == 1){
-				set_timer0_ms(1000);
-				count_value++;
-				if(count_value == 10) count_value = 0;
-			}
-			if(button_released_flag[1] == 1){
-				status = IDLE;
-			}
-			break;
-
-		// Add auto_decreasing state
-		case AUTO_DECREASING:
-			if(timer0_flag == 1){
-				set_timer0_ms(1000);
-				count_value--;
-				if(count_value < 0) count_value = 9;
-			}
-			if(button_released_flag[2] == 1){
-				status = IDLE;
-			}
-			break;
-
 		default:
 			break;
 	}
