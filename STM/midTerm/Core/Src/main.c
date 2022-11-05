@@ -94,47 +94,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, SET);
-  HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, SET);
-  HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, SET);
-
-  set_timer0_ms(1000);
-  set_timer1_ms(2000);
-  set_timer2_ms(3000);
-
   while (1)
   {
-	  // test button
-//	  if(button_pressed_flag[2]==1){
-//		  HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, RESET);
-//	  }
-//	  if(button_pressed1s_flag[2]==1){
-//		  HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, RESET);
-//	  }
-//	  if(button_pressed3s_flag[2]==1){
-//		  HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, RESET);
-//	  }
-//	  if(button_released_flag[2]==1){
-//		  HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, SET);
-//		  HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, SET);
-//		  HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, SET);
-//	  }
-
-	  //test timer
-	  if(timer0_flag == 1){
-		  set_timer0_ms(1000);
-		  HAL_GPIO_TogglePin(EN_1_GPIO_Port, EN_1_Pin);
-	  }
-
-	  if(timer1_flag == 1){
-		  set_timer1_ms(2000);
-		  HAL_GPIO_TogglePin(EN_2_GPIO_Port, EN_2_Pin);
-	  }
-
-	  if(timer2_flag == 1){
-		  set_timer2_ms(3000);
-		  HAL_GPIO_TogglePin(EN_3_GPIO_Port, EN_3_Pin);
-	  }
 
     /* USER CODE END WHILE */
 
@@ -237,18 +198,18 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, EN_1_Pin|EN_2_Pin|EN_3_Pin|EN_4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, SEG_1_Pin|SEG_2_Pin|SEG_3_Pin|SEG_4_Pin
                           |SEG_5_Pin|SEG_6_Pin|SEG_7_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : EN_1_Pin EN_2_Pin EN_3_Pin EN_4_Pin */
-  GPIO_InitStruct.Pin = EN_1_Pin|EN_2_Pin|EN_3_Pin|EN_4_Pin;
+  /*Configure GPIO pin : LED_Pin */
+  GPIO_InitStruct.Pin = LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : BUTTON_1_Pin BUTTON_2_Pin BUTTON_3_Pin */
   GPIO_InitStruct.Pin = BUTTON_1_Pin|BUTTON_2_Pin|BUTTON_3_Pin;

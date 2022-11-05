@@ -1,7 +1,6 @@
-00:23:55 **** Incremental Build of configuration Debug for project midTerm ****
+10:27:26 **** Incremental Build of configuration Debug for project midTerm ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
 arm-none-eabi-gcc -o "midTerm.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\learnin\vixuli-dieukhien\midTerm\STM\midTerm\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="midTerm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: midTerm.elf
  
@@ -10,15 +9,15 @@ arm-none-eabi-objdump -h -S  midTerm.elf  > "midTerm.list"
 arm-none-eabi-objcopy  -O ihex  midTerm.elf  "midTerm.hex"
 arm-none-eabi-objcopy  -O binary  midTerm.elf  "midTerm.bin"
    text	   data	    bss	    dec	    hex	filename
-   8872	     44	   1764	  10680	   29b8	midTerm.elf
+   8512	     44	   1764	  10320	   2850	midTerm.elf
 Finished building: default.size.stdout
- 
-Finished building: midTerm.bin
-Finished building: midTerm.hex
- 
  
 Finished building: midTerm.list
  
+Finished building: midTerm.hex
+Finished building: midTerm.bin
+ 
+ 
 
-00:23:56 Build Finished. 0 errors, 0 warnings. (took 1s.115ms)
+10:27:28 Build Finished. 0 errors, 0 warnings. (took 1s.580ms)
 

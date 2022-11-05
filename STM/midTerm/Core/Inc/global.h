@@ -10,11 +10,15 @@
 
 #define INIT 		0
 
+#define IDLE		1
+#define RESETED		2
+#define INCREASED	3
+#define DECREASED	4
+
 #include "button.h"
 #include "software_timer.h"
 
+extern int count_value;
 extern int status;
-
-
 
 #endif /* INC_GLOBAL_H_ */

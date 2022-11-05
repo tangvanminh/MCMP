@@ -1,0 +1,20 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 4, 2022
+ *      Author: MINH
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#define INIT 		0
+
+#include "button.h"
+#include "software_timer.h"
+
+extern int status;
+
+
+
+#endif /* INC_GLOBAL_H_ */
