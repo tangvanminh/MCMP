@@ -16,7 +16,6 @@
 #define DECREASED		4
 #define AUTO_INCREASING	5
 #define AUTO_DECREASING 6
-#define COUNT_DOWN		7
 
 #include "button.h"
 #include "software_timer.h"

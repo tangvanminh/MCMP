@@ -11,14 +11,9 @@ int count_value = 0;
 void fsm_simple_button_run(){
 	switch(status){
 		case INIT:
-			set_timer1_ms(10000); // code added in step 3
 			status = IDLE;
 			break;
 		case IDLE:
-			if(timer1_flag == 1){		// code added in step 3
-				set_timer0_ms(1000);	// code added in step 3
-				status = COUNT_DOWN; 	// code added in step 3
-			}							// code added in step 3
 			if(button_pressed_flag[0] == 1){
 				status = RESETED;
 			}
@@ -32,18 +27,15 @@ void fsm_simple_button_run(){
 				if(count_value < 0) count_value = 9;
 				status = DECREASED;
 			}
-
 			break;
 		case RESETED:
 			count_value = 0;
 			if(button_released_flag[0] == 1){
-				set_timer1_ms(10000); // code added in step 3
 				status = IDLE;
 			}
 			break;
 		case INCREASED:
 			if(button_released_flag[1] == 1){
-				set_timer1_ms(10000); // code added in step 3
 				status = IDLE;
 			}
 			// when button 1 is pressed more than 3s change state to auto increasing
@@ -54,7 +46,6 @@ void fsm_simple_button_run(){
 			break;
 		case DECREASED:
 			if(button_released_flag[2] == 1){
-				set_timer1_ms(10000); // code added in step 3
 				status = IDLE;
 			}
 
@@ -72,7 +63,6 @@ void fsm_simple_button_run(){
 				if(count_value == 10) count_value = 0;
 			}
 			if(button_released_flag[1] == 1){
-				set_timer1_ms(10000); // code added in step 3
 				status = IDLE;
 			}
 			break;
@@ -85,22 +75,10 @@ void fsm_simple_button_run(){
 				if(count_value < 0) count_value = 9;
 			}
 			if(button_released_flag[2] == 1){
-				set_timer1_ms(10000); // code added in step 3
 				status = IDLE;
 			}
 			break;
 
-		// new status in step 3
-		case COUNT_DOWN:
-			if(timer0_flag == 1){
-				set_timer0_ms(1000);
-				if(count_value > 0) count_value--;
-			}
-			if(button_pressed_flag[1] == 1 || button_pressed_flag[2] == 1){
-				set_timer1_ms(10000);
-				status = IDLE;
-			}
-			break;
 		default:
 			break;
 	}

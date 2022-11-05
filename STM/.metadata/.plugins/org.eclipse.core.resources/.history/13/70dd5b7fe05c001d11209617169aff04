@@ -25,7 +25,6 @@
 #include "global.h"
 #include "fsm_simple_button.h"
 #include "display.h"
-#include "led_blink.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,7 +98,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  led_blink_run();
 	  fsm_simple_button_run();
 	  display_run();
     /* USER CODE END WHILE */

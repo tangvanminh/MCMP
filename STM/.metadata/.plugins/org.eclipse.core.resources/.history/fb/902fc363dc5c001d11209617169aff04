@@ -15,10 +15,9 @@ void fsm_simple_button_run(){
 			status = IDLE;
 			break;
 		case IDLE:
-			if(timer1_flag == 1){		// code added in step 3
-				set_timer0_ms(1000);	// code added in step 3
-				status = COUNT_DOWN; 	// code added in step 3
-			}							// code added in step 3
+			if(timer1_flag == 1){
+				status = COUNT_DOWN; // code added in step 3
+			}
 			if(button_pressed_flag[0] == 1){
 				status = RESETED;
 			}
@@ -92,10 +91,7 @@ void fsm_simple_button_run(){
 
 		// new status in step 3
 		case COUNT_DOWN:
-			if(timer0_flag == 1){
-				set_timer0_ms(1000);
-				if(count_value > 0) count_value--;
-			}
+			if(count_value > 0) count_value--;
 			if(button_pressed_flag[1] == 1 || button_pressed_flag[2] == 1){
 				set_timer1_ms(10000);
 				status = IDLE;
